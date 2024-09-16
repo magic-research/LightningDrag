@@ -10,7 +10,7 @@ bash scripts/install_dependencies.sh
 ## 2. Download pretrained models
 Download the following models and place them under `./checkpoints`
 <!-- - [stable-diffusion-v1-5](https://huggingface.co/runwayml/stable-diffusion-v1-5) -->
-- [dreamshaper-8-inpainting](https://huggingface.co/Lykon/dreamshaper-8-inpainting)
+- [dreamshaper-8-inpainting](https://huggingface.co/Lykon/dreamshaper-8-inpainting) (refer to [IMPORTANT NOTES](#important-notes))
 - [lcm-lora-sdv1-5](https://huggingface.co/latent-consistency/lcm-lora-sdv1-5)
 - [IP-Adapter](https://huggingface.co/h94/IP-Adapter/tree/main/models)
 - [sd-vae-ft-mse](https://huggingface.co/stabilityai/sd-vae-ft-mse)
@@ -38,3 +38,6 @@ Place the checkpoints as follows:
         └── lightning-drag-sd15-attn.bin
 ```
 
+## IMPORTANT NOTES
+- Since [`runwayml/stable-diffusion-v1-5`](https://huggingface.co/runwayml/stable-diffusion-v1-5) is no longer available, we replace the inpainting checkpoint with [`Lykon/dreamshaper-8-inpainting`](https://huggingface.co/Lykon/dreamshaper-8-inpainting) without retraining or finetuning. Although it works, the results may not look the same as the one in the paper.
+- To reproduce the results from the paper, you may need to replace the inpainting checkpoint with your own `stable-diffusion-v1-5`.
