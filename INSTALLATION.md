@@ -4,7 +4,7 @@
 ```
 conda create --name lightning-drag python=3.9 pip
 conda activate lightning-drag
-bash scripts/install_dependencies.sh
+pip3 install -r requirements.txt
 ```
 
 ## 2. Download pretrained models
@@ -40,4 +40,4 @@ Place the checkpoints as follows:
 
 ## IMPORTANT NOTES
 - Since [`runwayml/stable-diffusion-v1-5`](https://huggingface.co/runwayml/stable-diffusion-v1-5) is no longer available, we replace the inpainting checkpoint with [`Lykon/dreamshaper-8-inpainting`](https://huggingface.co/Lykon/dreamshaper-8-inpainting) without retraining or finetuning. Although it works, the results may not look the same as the one in the paper.
-- To reproduce the results from the paper, you may need to replace the inpainting checkpoint with your own `stable-diffusion-v1-5`.
+- To reproduce the results from the paper, you may need to replace the inpainting checkpoint with your own `stable-diffusion-v1-5` checkpoint.
